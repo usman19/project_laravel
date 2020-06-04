@@ -58,7 +58,7 @@ class MahasiswaController extends Controller
         
         $mhs->save();        
 
-        return redirect('/mahasiswa');
+        return redirect('/mahasiswa')->with('status','data berhasil disimpan');
     }
 
     /**
@@ -82,6 +82,9 @@ class MahasiswaController extends Controller
     public function edit($id)
     {
         //
+        $mhs = Student::find($id);
+        return view('/mahasiswa/edit', ['mhs' => $mhs]);
+
     }
 
     /**
@@ -94,7 +97,27 @@ class MahasiswaController extends Controller
     public function update(Request $request, $id)
     {
         //
+    /*  Student::where('id', $mhs->id)
+          ->update([
+            'nama' => $request->nama,
+            'npm' => $request->npm,
+            'email' => $request->email,
+            'jurusan' => $request->jurusan
+          ]);
+        return redirect('/mahasiswa')->with('status','data berhasil di ubah'); */
+
+    $mhs = Student::find($id);
+    $mhs->nama = $request->nama;
+    $mhs->npm = $request->npm;
+    $mhs->email = $request->email;
+    $mhs->jurusan = $request->jurusan;
+    
+    $mhs->save();
+    return redirect('/mahasiswa')->with('status','data berhasil di ubah');
+
     }
+
+
 
     /**
      * Remove the specified resource from storage.

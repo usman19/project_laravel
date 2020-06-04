@@ -35,4 +35,4 @@ Route::get('/mahasiswa', 'MahasiswaController@index');
 Route::get('/delete/{id}', 'MahasiswaController@delete');
 Route::get('/edit/{id}', 'MahasiswaController@edit');
 Route::post('/store', 'MahasiswaController@store');
-
+Route::put('/update/{id}', 'MahasiswaController@update');

@@ -11,11 +11,16 @@ class PagesController extends Controller
     }
 
     public function about(){
+
     	return view('about', ['nama' => 'wahyu usman']);
     }
 
     public function input(){
     	return view('mahasiswa/input');
+    }
+
+    public function edit(){
+    	return view('mahasiswa/edit');
     }
 
 }
