@@ -36,3 +36,7 @@ Route::get('/delete/{id}', 'MahasiswaController@delete');
 Route::get('/edit/{id}', 'MahasiswaController@edit');
 Route::post('/store', 'MahasiswaController@store');
 Route::put('/update/{id}', 'MahasiswaController@update');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
