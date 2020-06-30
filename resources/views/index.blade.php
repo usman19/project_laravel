@@ -4,11 +4,13 @@
 
 @section('container')
 
- 
+ 	
     <div class="jumbotron" style="margin-top: 20px;">
-	  <h1>Hello, world!</h1>
-	  <p>...</p>
-	  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+     <div class="container">
+	      <h1>Hello, world!</h1>
+		  <p>...</p>
+		   <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+     </div>
 	</div>	
   <div class="container">
 	<div class="row">
@@ -36,7 +38,7 @@
 	      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 	      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	      <div class="caption">
-	        <h3>Thumbnail label</h3>
+	        <h3><span class="glyphicon glyphicon-heart"></span>Thumbnail label</h3>
 	        <p>...</p>
 	        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 	      </div>

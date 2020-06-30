@@ -29,13 +29,19 @@
 
 Route::get('/', 'PagesController@home');
 Route::get('/about', 'PagesController@about');
-Route::get('/input', 'PagesController@input');
+
+Route::get('/login', 'PagesController@input');
 
 Route::get('/mahasiswa', 'MahasiswaController@index');
 Route::get('/delete/{id}', 'MahasiswaController@delete');
 Route::get('/edit/{id}', 'MahasiswaController@edit');
 Route::post('/store', 'MahasiswaController@store');
 Route::put('/update/{id}', 'MahasiswaController@update');
+
+Route::group(['middleware' => ['auth']], function(){
+	Route::get('/mahasiswa', 'MahasiswaController@index');
+	Route::get('/input', 'PagesController@input');
+});
 
 Auth::routes();
 

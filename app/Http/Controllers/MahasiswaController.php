@@ -83,6 +83,7 @@ class MahasiswaController extends Controller
     {
         //
         $mhs = Student::find($id);
+       
         return view('/mahasiswa/edit', ['mhs' => $mhs]);
 
     }
@@ -136,4 +137,6 @@ class MahasiswaController extends Controller
     {
         return view('mahasiswa/input');
     }
+
+
 }
