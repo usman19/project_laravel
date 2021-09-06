@@ -24,6 +24,8 @@
 	Route::get('/mahasiswa', function () {
 	    return view('mahasiswa');
 	});
+
+	test branch usmant_uat
 */
 
 
